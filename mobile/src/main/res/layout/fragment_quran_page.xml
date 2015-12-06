@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.v4.widget.NestedScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <!-- app:layout_behavior=""-->
+    <com.bluejamesbond.text.DocumentView
+        android:id="@+id/documentView"
+        app:documentView_antialias="true"
+        app:documentView_cacheConfig="auto_quality"
+        app:documentView_hyphen="-"
+        app:documentView_reverse="true"
+        app:documentView_textAlignment="justified"
+        app:documentView_textFormat="formatted"
+        app:documentView_textSize="16sp"
+        app:documentView_textColor="@android:color/white"
+        app:documentView_textSubPixel="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</android.support.v4.widget.NestedScrollView>
+</LinearLayout>
