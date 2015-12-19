@@ -7,7 +7,8 @@ import android.os.Bundle;
 public class QuranActivity extends AppCompatActivity {
     static public final String Title = "title";
     static public final String StartSura = "sSura",SuraStart = StartSura,
-            SuraIndex = "iSura", SuraAya = "aSura";
+            SuraIndex = "iSura", SuraAya = "aSura",
+            StartHizb = "sHizb",Hizb = "Hizb";
     static public final String StartPage = "sPage";
     static public final String StartAll = "sAll";
     static public final String OrderType = "tOrder";

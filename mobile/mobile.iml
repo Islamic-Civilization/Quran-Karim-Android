@@ -73,7 +73,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/design/23.0.0/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/preference-v7/23.0.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.github.bluejamesbond/textjustify-android/2.1.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
@@ -96,7 +95,6 @@
     <orderEntry type="library" exported="" name="textjustify-android-2.1.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.0.0" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-23.0.0" level="project" />
-    <orderEntry type="library" exported="" name="preference-v7-23.0.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-23.0.0" level="project" />
     <orderEntry type="library" exported="" name="cardview-v7-23.0.0" level="project" />
     <orderEntry type="library" exported="" name="design-23.0.0" level="project" />

@@ -27,6 +27,7 @@ import org.islamic.civil.quran_karim.fragment.QuranListFragment;
 import org.islamic.civil.quran_karim.fragment.OnFragmentInteractionListener;
 import org.islamic.civil.quran_karim.fragment.QuranPageFragment;
 import org.islamic.civil.quran_karim.fragment.QuranSuraFragment;
+import org.islamic.civil.util.view.RtlViewPager;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,OnFragmentInteractionListener {
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity
         initNavigation();
 
         TabPagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager());
-        ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager);
+        RtlViewPager viewPager = (RtlViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(adapter);
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tablayout);
         tabLayout.setupWithViewPager(viewPager);
@@ -133,20 +134,6 @@ public class MainActivity extends AppCompatActivity
         mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
 
-    public void onSectionAttached(int number) {
-        switch (number) {
-            case 1:
-                mTitle = getString(R.string.title_section1);
-                break;
-            case 2:
-                mTitle = getString(R.string.title_section2);
-                break;
-            case 3:
-                mTitle = getString(R.string.title_section3);
-                break;
-        }
-    }
-
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
 //        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
@@ -191,7 +178,11 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem menuItem) {
         menuItem.setChecked(true);
         mDrawerLayout.closeDrawers();
-        Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
+        switch(menuItem.getItemId()){
+            case R.id.drawer_goTo:
+            case R.id.drawer_advancedSearch:
+            case R.id.drawer_tartilRoll:
+        }
         return true;
     }
 

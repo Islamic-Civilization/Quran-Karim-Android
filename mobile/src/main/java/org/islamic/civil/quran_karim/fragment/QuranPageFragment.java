@@ -22,6 +22,7 @@ import com.bluejamesbond.text.DocumentView;
 
 import org.islamic.civil.quran_karim.R;
 import org.islamic.civil.quran_karim.data.QuranMetaDataHelper;
+import org.islamic.civil.quran_karim.data.model.QuranSuraModel;
 import org.islamic.civil.quran_karim.fragment.adapter.QuranListAdapter;
 import org.islamic.civil.util.text.SearchUtils;
 
@@ -67,7 +68,7 @@ public class QuranPageFragment extends Fragment
     int tabPosition;
     RecyclerView mRecyclerView;
     QuranListAdapter mAdapter;
-    List<QuranListAdapter.QuranSuraModel> mModels;
+    List<QuranSuraModel> mModels;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -142,9 +143,9 @@ public class QuranPageFragment extends Fragment
             while(c.moveToNext()){
                 if(c.getShort(1)<=1)
                     break;
-                QuranListAdapter.QuranSuraModel sura = new QuranListAdapter.QuranSuraModel();
-                sura.index = ++i;
-                sura.start = c.getInt(0);
+                QuranSuraModel sura = new QuranSuraModel();
+                sura.sura = ++i;
+                sura.start = c.getShort(0);
                 sura.ayas = c.getShort(1);
                 sura.order = c.getShort(2);
                 sura.name = c.getString(3);
@@ -163,7 +164,7 @@ public class QuranPageFragment extends Fragment
             String[] sura = getActivity().getResources().getStringArray(R.array.sura_names);
             for (String name :
                     sura) {
-                mModels.add(new QuranListAdapter.QuranSuraModel(name, null, ++i));
+                mModels.add(new QuranSuraModel(name, null, ++i));
             }
         }
     }
@@ -176,17 +177,17 @@ public class QuranPageFragment extends Fragment
     @Override
     public boolean onQueryTextChange(String newText) {
         String text = SearchUtils.arabicSimplify4AdvancedSearch(newText);
-        final List<QuranListAdapter.QuranSuraModel> filteredModelList = filter(mModels, text);
+        final List<QuranSuraModel> filteredModelList = filter(mModels, text);
         mAdapter.animateTo(filteredModelList);
         mRecyclerView.scrollToPosition(0);
         return true;
     }
 
-    private List<QuranListAdapter.QuranSuraModel> filter(List<QuranListAdapter.QuranSuraModel> models, String query) {
+    private List<QuranSuraModel> filter(List<QuranSuraModel> models, String query) {
         query = query.toLowerCase();
 
-        final List<QuranListAdapter.QuranSuraModel> filteredModelList = new ArrayList<>();
-        for (QuranListAdapter.QuranSuraModel model : models) {
+        final List<QuranSuraModel> filteredModelList = new ArrayList<>();
+        for (QuranSuraModel model : models) {
             String text = model.name;//.toLowerCase()
             if (text.contains(query)|| (model.tname != null && (model.tname.toLowerCase()).contains(query)))
                 filteredModelList.add(model);

@@ -6,7 +6,9 @@ package org.islamic.civil.util.text;
 
 import android.os.Build;
 
+import java.text.DecimalFormat;
 import java.text.Normalizer;
+import java.text.NumberFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -184,5 +186,10 @@ public final class ArabicNormalizer implements RTLCharacters{
         }
 
         return sb.toString();
+    }
+
+    public static String localNumber(long i){
+        NumberFormat number = DecimalFormat.getIntegerInstance();
+        return number.format(i);
     }
 }

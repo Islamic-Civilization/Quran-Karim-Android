@@ -7,6 +7,10 @@
         android:title="@string/pref_header_general" android:icon="@drawable/ic_info_black_24dp" />
 
     <header
+        android:fragment="org.islamic.civil.quran_karim.SettingsActivity$GeneralPreferenceFragment"
+        android:title="@string/pref_header_view" android:icon="@drawable/ic_info_black_24dp" />
+
+    <header
         android:fragment="org.islamic.civil.quran_karim.SettingsActivity$NotificationPreferenceFragment"
         android:title="@string/pref_header_notifications"
         android:icon="@drawable/ic_notifications_black_24dp" />

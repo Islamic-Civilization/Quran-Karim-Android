@@ -2,25 +2,18 @@
     <string name="app_name">قرآن کریم</string>
     <string name="shared_label" translatable="false">Islamic Civilization</string>
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-
     <string name="navigation_drawer_open">باز کردن کشو</string>
     <string name="navigation_drawer_close">بستن کشو</string>
 
     <string name="drawer_header_text">drawer_header_text + drawer_header_text</string>
 
-    <string name="action_example">Example action</string>
-
     <string name="action_settings">تنظیمات</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="action_search" >جستجو</string>
     <string name="action_sort" >مرتب سازی</string>
     <string name="action_about">درباره</string>
-    <string name="search_hint" />
+    <string name="search_hint" >جستجو</string>
     <string name="title_activity_settings">تنظیمات</string>
 
 
@@ -32,6 +25,9 @@
     </string-array>
 
     <!-- Strings related to Settings -->
+    <string name="back">بازگشت</string>
+    <string name="skip">صرف نظر</string>
+    <string name="next">بعدی</string>
 
     <!-- Example General settings -->
     <string name="pref_header_general">عمومی</string>
@@ -54,6 +50,21 @@
         <item>1</item>
         <item>0</item>
         <item>-1</item>
+    </string-array>
+
+    <!-- setting for view -->
+    <string name="pref_header_view">پوسته</string>
+
+    <string name="pref_view_theme">پوسته</string>
+    <string-array name="pref_view_theme_titles">
+        <item>Dark</item>
+        <item>Light with Dark ActionBar</item>
+        <item>Light</item>
+    </string-array>
+    <string-array name="pref_view_theme_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
     </string-array>
 
     <!-- Example settings for Data & Sync -->
@@ -93,4 +104,11 @@
     <string name="prefs_sdcard_external">حافظه خارجی</string>
 
     <string name="pressAgainToExit">برای خروج دو بار کلیلک کنید</string>
+    <string name="advancedSearch">جستجوی پیشرفته</string>
+    <string name="dataManager">مدیریت داده</string>
+    <string name="downloadManager">مدیریت بارگیری</string>
+    <string name="exportImport">صادر/وارد کردن</string>
+    <string name="data">داده‌ها</string>
+    <string name="tartilRoll">قواعد ترتیل</string>
+    <string name="goTo">برو به ...</string>
 </resources>

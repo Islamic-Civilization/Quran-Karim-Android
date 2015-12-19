@@ -1,33 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/navigation_item_attachment"
-            android:checked="true"
-            android:icon="@drawable/ic_drawer"
-            android:title="@string/app_name" />
-        <item
-            android:id="@+id/navigation_item_images"
-            android:icon="@drawable/ic_drawer"
-            android:title="@string/navigation_drawer_open" />
-        <item
-            android:id="@+id/navigation_item_location"
-            android:icon="@drawable/ic_drawer"
-            android:title="@string/navigation_drawer_close" />
-    </group>
+    <!--<group android:checkableBehavior="single">-->
+        <!--<item-->
+            <!--android:id="@+id/navigation_item_attachment"-->
+            <!--android:checked="true"-->
+            <!--android:icon="@drawable/ic_drawer"-->
+            <!--android:title="@string/app_name" />-->
+        <!--<item-->
+            <!--android:id="@+id/navigation_item_images"-->
+            <!--android:icon="@drawable/ic_drawer"-->
+            <!--android:title="@string/navigation_drawer_open" />-->
+        <!--<item-->
+            <!--android:id="@+id/navigation_item_location"-->
+            <!--android:icon="@drawable/ic_drawer"-->
+            <!--android:title="@string/navigation_drawer_close" />-->
+    <!--</group>-->
 
     <item android:title="@string/app_name">
         <menu>
             <item
+                android:id="@+id/drawer_goTo"
                 android:icon="@drawable/ic_drawer"
-                android:title="@string/app_name" />
+                android:title="@string/goTo"/>
+            <item
+                android:id="@+id/drawer_advancedSearch"
+                android:icon="@drawable/ic_drawer"
+                android:title="@string/advancedSearch"/>
+            <item
+                android:id="@+id/drawer_tartilRoll"
+                android:icon="@drawable/ic_drawer"
+                android:title="@string/tartilRoll" />
+        </menu>
+    </item>
+    <item android:title="@string/data">
+        <menu>
             <item
                 android:icon="@drawable/ic_drawer"
-                android:title="@string/navigation_drawer_close" />
-
+                android:title="@string/dataManager" />
             <item
                 android:icon="@drawable/ic_drawer"
-                android:title="قواعد ترتیل" />
+                android:title="@string/downloadManager" />
+            <item
+                android:icon="@drawable/ic_drawer"
+                android:title="@string/exportImport"/>
         </menu>
     </item>
 </menu>

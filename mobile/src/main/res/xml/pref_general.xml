@@ -1,6 +1,9 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <SwitchPreference
+    <android.support.v7.preference.SwitchPreferenceCompat
         android:key="example_switch"
         android:title="@string/pref_title_social_recommendations"
         android:summary="@string/pref_description_social_recommendations"
@@ -8,7 +11,7 @@
 
     <!-- NOTE: EditTextPreference accepts EditText attributes. -->
     <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
-    <EditTextPreference
+    <android.support.v7.preference.EditTextPreference
         android:key="example_text"
         android:title="@string/pref_title_display_name"
         android:defaultValue="@string/pref_default_display_name"
@@ -21,7 +24,7 @@
     <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
          dismiss it. -->
     <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
-    <ListPreference
+    <android.support.v7.preference.ListPreference
         android:key="example_list"
         android:title="@string/pref_title_add_friends_to_messages"
         android:defaultValue="-1"
@@ -30,4 +33,4 @@
         android:negativeButtonText="@null"
         android:positiveButtonText="@null" />
 
-</PreferenceScreen>
+</android.support.v7.preference.PreferenceScreen>

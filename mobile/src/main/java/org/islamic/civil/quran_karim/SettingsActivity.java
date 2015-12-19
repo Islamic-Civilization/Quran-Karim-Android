@@ -15,11 +15,12 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.support.v7.app.ActionBar;
-import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
+
+import org.islamic.civil.util.preference.PreferenceFragment;
 
 import java.util.List;
 
@@ -223,7 +224,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * Make sure to deny any unknown fragments here.
      */
     protected boolean isValidFragment(String fragmentName) {
-        return PreferenceFragment.class.getName().equals(fragmentName)
+        return android.preference.PreferenceFragment.class.getName().equals(fragmentName)
+                || PreferenceFragment.class.getName().equals(fragmentName)
                 || GeneralPreferenceFragment.class.getName().equals(fragmentName)
                 || DataSyncPreferenceFragment.class.getName().equals(fragmentName)
                 || NotificationPreferenceFragment.class.getName().equals(fragmentName);
@@ -233,7 +235,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * This fragment shows general preferences only. It is used when the
      * activity is showing a two-pane settings UI.
      */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class GeneralPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -264,7 +265,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * This fragment shows notification preferences only. It is used when the
      * activity is showing a two-pane settings UI.
      */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class NotificationPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -294,7 +294,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * This fragment shows data and sync preferences only. It is used when the
      * activity is showing a two-pane settings UI.
      */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class DataSyncPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
